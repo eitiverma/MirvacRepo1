@@ -18,10 +18,10 @@ public class acc {
     }
     public string getaddress()
     {
+        System.debug('Fixed');
         return addr;
             }
             // US 1 build
-System.debug('Fixed');
 
 
     }
