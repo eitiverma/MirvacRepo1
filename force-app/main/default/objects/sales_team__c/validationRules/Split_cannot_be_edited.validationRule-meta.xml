@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Split_cannot_be_edited</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( ISPICKVAL(Opportunity__r.StageName,&#39;Closed Won&#39;),true,false)</errorConditionFormula>
+    <errorMessage>split cannot be edited</errorMessage>
+</ValidationRule>

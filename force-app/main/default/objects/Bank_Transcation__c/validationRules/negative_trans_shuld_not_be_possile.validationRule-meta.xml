@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>negative_trans_shuld_not_be_possile</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( TransType__c , &quot;Withdraw&quot;) ,(  AccountNo__r.AvailBalance__c  -  TransAmount__c  )   &lt; 500)</errorConditionFormula>
+    <errorMessage>ur balance is less then 500</errorMessage>
+</ValidationRule>

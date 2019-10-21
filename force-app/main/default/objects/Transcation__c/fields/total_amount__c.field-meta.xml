@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>total_amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(First_name__r.Age__c  &gt; 60,  flight_from__r.Base_fare__c  / 2,  flight_from__r.Base_fare__c )  + 
+ IF( AND( Loc_id__r.Location_name__c =&quot;delhi&quot;, First_name__r.Age__c  &gt; 60) , (110*( flight_from__r.Base_fare__c  / 2)) / 100 , 
+ IF( AND( Loc_id__r.Location_name__c =&quot;delhi&quot;, First_name__r.Age__c  &lt; 60),(110* flight_from__r.Base_fare__c ) / 100 ,
+IF( AND( Loc_id__r.Location_name__c  &lt;&gt; &quot;delhi&quot;, First_name__r.Age__c  &gt;60),(90*( flight_from__r.Base_fare__c  / 2)) / 100,(90* flight_from__r.Base_fare__c ) / 100) )) + 
+ IF( AND( Loc_id__r.Location_name__c =&quot;delhi&quot;, First_name__r.Age__c  &gt; 60) ,(10*(( (110*( flight_from__r.Base_fare__c  / 2)) / 100)+ flight_from__r.Base_fare__c  / 2)) / 100 , 
+ IF( AND( Loc_id__r.Location_name__c =&quot;delhi&quot;, First_name__r.Age__c  &lt; 60),(10*(((110* flight_from__r.Base_fare__c ) / 100)+ flight_from__r.Base_fare__c  / 2) ) / 100,
+IF( AND( Loc_id__r.Location_name__c  &lt;&gt; &quot;delhi&quot;, First_name__r.Age__c  &gt;60),(10*(((90*( flight_from__r.Base_fare__c  / 2)) / 100)+ flight_from__r.Base_fare__c  / 2)) / 100,(10*(((90* flight_from__r.Base_fare__c ) / 100) +  flight_from__r.Base_fare__c )) / 100 ) )) +
+ IF( ISPICKVAL( flight_from__r.meal_required__c , &quot;yes&quot;) , 500, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>total_amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

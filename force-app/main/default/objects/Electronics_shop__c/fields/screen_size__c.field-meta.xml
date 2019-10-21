@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>screen_size__c</fullName>
+    <externalId>false</externalId>
+    <label>screen size</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>18 inch</fullName>
+                <default>false</default>
+                <label>18 inch</label>
+            </value>
+            <value>
+                <fullName>21 inch</fullName>
+                <default>false</default>
+                <label>21 inch</label>
+            </value>
+            <value>
+                <fullName>32 inch</fullName>
+                <default>false</default>
+                <label>32 inch</label>
+            </value>
+            <value>
+                <fullName>42 inch</fullName>
+                <default>false</default>
+                <label>42 inch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

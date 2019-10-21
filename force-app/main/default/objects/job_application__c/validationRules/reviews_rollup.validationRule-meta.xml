@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>reviews_rollup</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( status__c , &quot;hired&quot;) , no_of_reviews__c &lt; PRIORVALUE( no_of_reviews__c ) )</errorConditionFormula>
+    <errorMessage>no deletion</errorMessage>
+</ValidationRule>

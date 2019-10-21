@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>close_date_is_nt_spd</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( close_date__c )  &amp;&amp; 
+ ISPICKVAL( status__c ,&quot;closed-filled&quot; ) ||  ISPICKVAL(status__c, &quot;closed-not approved&quot;)</errorConditionFormula>
+    <errorDisplayField>close_date__c</errorDisplayField>
+    <errorMessage>close date must be mntn</errorMessage>
+</ValidationRule>
