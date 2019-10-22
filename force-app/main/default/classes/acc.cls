@@ -19,6 +19,8 @@ public class acc {
     public string getaddress()
     {
         System.debug('Fixed');
+        Integer x = 40;
+        System.debug(x);
         return addr;
             }
             // US 1 build
